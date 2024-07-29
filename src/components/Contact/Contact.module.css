@@ -1,0 +1,64 @@
+@import "../../vars.css";
+
+.container {
+  color: var(--color-text);
+  margin-top: 60px; /* Reduced margin */
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 10px 3%; /* Reduced padding */
+  gap: 20px; /* Adjusted gap */
+}
+
+.text h2 {
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-family: Rochester;
+  text-align: center;
+}
+
+.text p {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: Inter;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  list-style: none;
+  gap: 30px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.link img {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    align-items: center;
+  }
+}

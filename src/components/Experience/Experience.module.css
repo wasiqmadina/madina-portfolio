@@ -1,0 +1,219 @@
+/* Container for horizontal scrolling effect */
+.history {
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+  position: relative; /* Positioning for the inner wrapper */
+  width: 100%; /* Ensure full width */
+  background: var(--color-background); /* Ensure background color for visibility */
+}
+
+/* Inner wrapper to handle scrolling */
+.history-inner {
+  display: flex;
+  flex: 1;
+  min-width: 200%; /* Make the inner wrapper twice the width of the container */
+  animation: scroll-horizontal 30s linear infinite; /* Continuous scrolling */
+}
+
+/* Ensure history items are displayed inline and have proper spacing */
+.historyItem {
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  background: rgba(12, 12, 12, 0.6);
+  border-radius: 10px;
+  padding: 24px;
+  width: calc(25% - 20px); /* Adjust based on your design */
+  box-sizing: border-box;
+  margin-right: 20px; /* Space between items */
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0); /* Start from the initial position */
+  }
+  100% {
+    transform: translateX(-50%); /* End at the position where the first item starts again */
+  }
+}
+
+/* Default styles */
+.container {
+  color: var(--color-text);
+  margin-top: 79px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.historyItem img {
+  display: block; /* Remove inline spacing */
+  margin: 0 auto; /* Center the image horizontally */
+  width: 50px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.historyItemDetails {
+  font-family: var(--font-inter);
+  text-align: center; /* Center the title */
+}
+
+.historyItemDetails h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 10px 0; /* Margin below the title */
+  font-family: 'Arial', sans-serif;
+}
+
+.historyItemDetails p {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 10px 0; /* Margin below the paragraph */
+}
+
+.historyItemDetails ul {
+  text-align: left; /* Align bullets and text to the left */
+  margin: 0; /* Remove default margin */
+  padding-left: 20px; /* Ensure enough padding for bullet alignment */
+  list-style-position: outside; /* Ensure bullets are inside the list */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.historyItemDetails li {
+  margin-bottom: 8px; /* Space between list items */
+  padding-left: 0; /* Remove extra padding from list items */
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center skills horizontally */
+  gap: 60px;
+  margin-top: 30px; /* Add margin to move the skills down */
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  min-width: 120px; /* Adjust based on design */
+}
+
+.skillImageContainer {
+  background-color: var(--color-secondary);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.skillImageContainer img {
+  width: 75px;
+}
+
+.skill p {
+  font-size: 25px;
+  font-family: var(--font-inter);
+  font-weight: 500;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 830px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+  }
+
+  .skills {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px; /* Reduced gap between skills items */
+    margin-top: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .skill {
+    min-width: 80px; /* Smaller minimum width for skill items */
+    flex: 1 1 auto; /* Allow skill items to grow and shrink */
+  }
+
+  .skillImageContainer {
+    width: 80px; /* Adjusted width for smaller screens */
+    height: 80px;
+  }
+
+  .skillImageContainer img {
+    width: 50px; /* Adjusted image size for smaller screens */
+  }
+
+  .skill p {
+    font-size: 16px; /* Smaller font size for skill descriptions */
+  }
+
+
+  .history {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of items */
+    display: flex; /* Ensure items are laid out in a row */
+    gap: 15px; /* Adjust gap between history items */
+    animation: none; /* Remove animation for better performance on smaller screens */
+  }
+
+  .historyItem {
+    display: inline-block; /* Allow items to be in a row */
+    width: auto; /* Adjust width based on content */
+    max-width: 100%; /* Ensure items don’t overflow their container */
+    padding: 16px; /* Adjust padding for smaller screens */
+    margin-bottom: 0; /* Remove margin-bottom to avoid stacking */
+    box-sizing: border-box; /* Ensure padding and margin are included in width */
+    background: rgba(12, 12, 12, 0.6); /* Ensure background color */
+    border-radius: 10px; /* Ensure border-radius for design */
+    flex: 1 1 auto; /* Allow items to grow and shrink as needed */
+  }
+
+  .historyItem img {
+    width: 40px; /* Adjust width as needed */
+  }
+
+  .historyItemDetails h3 {
+    font-size: 18px; /* Adjust font size for titles */
+  }
+
+  .historyItemDetails p {
+    font-size: 14px; /* Adjust font size for paragraphs */
+  }
+
+  .historyItemDetails ul {
+    padding-left: 15px; /* Adjust padding for bullets */
+    font-size: 12px; /* Adjust font size for list items */
+  }
+
+  .historyItemDetails li {
+    font-size: 12px; /* Adjust font size for list items */
+  }
+
+  .title {
+    font-size: 20px; /* Adjust font size for the title */
+  }
+}

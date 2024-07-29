@@ -1,0 +1,78 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  background-color: rgba(12, 12, 12, 0.6);
+  border-radius: 15px;
+  padding: 73px;
+  margin-top: 129px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aboutImage {
+  width: 35%;
+  margin-right: 5%;
+}
+
+.aboutItem {
+  color: var(--color-text);
+  width: 60%;
+}
+
+.aboutItemText p {
+  font-size: 20px;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 20px; /* Add space between paragraphs */
+  font-family: var(--font-inter);
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    background-color: transparent;
+    padding: 20px; /* Adjust padding for mobile view */
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center; /* Center content for mobile view */
+    gap: 20px; /* Adjust spacing for mobile view */
+  }
+
+  .aboutImage {
+    width: 80%; /* Adjust width for mobile view */
+    margin-right: 0; /* Remove right margin for mobile view */
+  }
+
+  .aboutItem {
+    width: 100%; /* Full width for mobile view */
+    text-align: center; /* Center text for better readability on mobile */
+  }
+
+  .aboutItemText p {
+    font-size: 16px; /* Adjust font size for mobile */
+    margin-top: 0; /* Adjust margin for mobile */
+    margin-bottom: 20px; /* Ensure space between paragraphs on mobile */
+  }
+}
+
+

@@ -1,0 +1,50 @@
+[
+  {
+    "role": "Information Technology Intern",
+    "organisation": "Baltimore Orioles",
+    "startDate": "June 2024",
+    "endDate": "August 2024",
+    "experiences": [
+      "Developed features for the company's web application",
+      "Collaborated with a team of engineers and designers",
+      "Implemented responsive design using CSS and JavaScript"
+    ],
+    "imageSrc": "history/orioles.png"
+  },
+  {
+    "role": "Software Engineer",
+    "organisation": "Headstarter AI",
+    "startDate": "July 2024",
+    "endDate": "September 2024",
+    "experiences": [
+      "Designed and developed the company’s landing page",
+      "Optimized web performance and accessibility",
+      "Worked closely with the marketing team to improve SEO"
+    ],
+    "imageSrc": "history/headstarter.png"
+  },
+  {
+    "role": "Guild Student",
+    "organisation": "BreakThrough Tech",
+    "startDate": "Aug 2023",
+    "endDate": "Aug 2023",
+    "experiences": [
+      "Conducted research on machine learning algorithms",
+      "Developed scripts for data analysis",
+      "Assisted in writing research papers"
+    ],
+    "imageSrc": "history/breakthroughtech.png"
+  },
+  {
+    "role": "Researcher",
+    "organisation": "Johns Hopkins",
+    "startDate": "July 2023",
+    "endDate": "Aug 2023",
+    "experiences": [
+      "Built and maintained the company's internal tools",
+      "Collaborated with cross-functional teams",
+      "Participated in code reviews and agile ceremonies"
+    ],
+    "imageSrc": "history/hopkins.png"
+  }
+]

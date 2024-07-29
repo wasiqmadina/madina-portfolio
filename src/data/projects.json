@@ -1,0 +1,10 @@
+[
+    {
+      "title": "Personal website",
+      "imageSrc": "assets/projects/project.png",
+      "description": "This landing page is built with React, HTML, CSS.",
+      "skills": [],
+      "demo": "https://www.example.com",
+      "source": "https://www.github.com"
+    }
+  ]
