@@ -1,18 +1,47 @@
-/* Container for horizontal scrolling effect */
-.history {
-  display: flex;
-  overflow: hidden; /* Hide overflow */
-  position: relative; /* Positioning for the inner wrapper */
-  width: 100%; /* Ensure full width */
-  background: var(--color-background); /* Ensure background color for visibility */
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
 }
 
-/* Inner wrapper to handle scrolling */
-.history-inner {
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container for the experience section */
+.container {
+  color: var(--color-text);
+  margin: 79px 10%;
+  transition: border 0.3s; /* Smooth transition for border effect */
+}
+
+/* Title for the section */
+.title {
+  color: var(--color-text);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}se
+
+/* Content container */
+.content {
   display: flex;
-  flex: 1;
-  min-width: 200%; /* Make the inner wrapper twice the width of the container */
-  animation: scroll-horizontal 30s linear infinite; /* Continuous scrolling */
+  flex-direction: column;
+  gap: 34px;
+}
+
+/* History section */
+.history {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: space-between; /* Distribute items evenly */
+  width: 100%;
+  background: var(--color-background); /* Ensure background color for visibility */
+  transition: border 0.3s; /* Smooth transition for border effect */
 }
 
 /* Ensure history items are displayed inline and have proper spacing */
@@ -21,45 +50,25 @@
   flex-direction: column; /* Arrange items vertically */
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
-  background: rgba(12, 12, 12, 0.6);
+  background: rgba(156, 169, 134, 0.5);
   border-radius: 10px;
   padding: 24px;
   width: calc(25% - 20px); /* Adjust based on your design */
   box-sizing: border-box;
-  margin-right: 20px; /* Space between items */
+  margin-bottom: 20px; /* Space between items */
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Smooth transition for hover effect */
 }
 
-/* Keyframes for continuous scrolling */
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0); /* Start from the initial position */
-  }
-  100% {
-    transform: translateX(-50%); /* End at the position where the first item starts again */
-  }
+/* Hover effect for the container */
+.container:hover .history {
+  border: 2px solid var(--color-accent); /* Add a border on hover */
 }
 
-/* Default styles */
-.container {
-  color: var(--color-text);
-  margin-top: 79px;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.title {
-  color: var(--color-text);
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 14px;
+/* Hover effect for history items */
+.historyItem:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  filter: brightness(1.2); /* Brighten the container */
 }
 
 .historyItem img {
@@ -100,6 +109,7 @@
   padding-left: 0; /* Remove extra padding from list items */
 }
 
+/* Skills section */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -108,14 +118,22 @@
   margin-top: 30px; /* Add margin to move the skills down */
 }
 
+/* Individual skill item */
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 11px;
   min-width: 120px; /* Adjust based on design */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
+.skill:hover {
+  transform: scale(1.1); /* Slightly increase size */
+  z-index: 1; /* Bring the hovered skill to the front */
+}
+
+/* Skill image container with brightening effect */
 .skillImageContainer {
   background-color: var(--color-secondary);
   border-radius: 100%;
@@ -124,16 +142,31 @@
   justify-content: center;
   width: 120px;
   height: 120px;
+  transition: filter 0.3s ease; /* Smooth transition for filter */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Hover effect for the skill image container */
+.skill:hover .skillImageContainer {
+  filter: brightness(1.4); /* Brighten the container */
+}
+
+/* Skill image */
 .skillImageContainer img {
   width: 75px;
+  transition: width 0.3s ease; /* Smooth transition for image size */
 }
 
+/* Skill text */
 .skill p {
   font-size: 25px;
   font-family: var(--font-inter);
   font-weight: 500;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.skill:hover p {
+  color: var(--color-accent); /* Change text color on hover */
 }
 
 /* Media Queries for Responsive Design */
@@ -144,52 +177,17 @@
     gap: 34px;
   }
 
-  .skills {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px; /* Reduced gap between skills items */
+  .history {
+    flex-direction: column; /* Stack history items vertically */
+    gap: 15px; /* Reduced gap between history items */
     margin-top: 20px; /* Adjust margin for smaller screens */
   }
 
-  .skill {
-    min-width: 80px; /* Smaller minimum width for skill items */
-    flex: 1 1 auto; /* Allow skill items to grow and shrink */
-  }
-
-  .skillImageContainer {
-    width: 80px; /* Adjusted width for smaller screens */
-    height: 80px;
-  }
-
-  .skillImageContainer img {
-    width: 50px; /* Adjusted image size for smaller screens */
-  }
-
-  .skill p {
-    font-size: 16px; /* Smaller font size for skill descriptions */
-  }
-
-
-  .history {
-    width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping of items */
-    display: flex; /* Ensure items are laid out in a row */
-    gap: 15px; /* Adjust gap between history items */
-    animation: none; /* Remove animation for better performance on smaller screens */
-  }
-
   .historyItem {
-    display: inline-block; /* Allow items to be in a row */
-    width: auto; /* Adjust width based on content */
+    width: 100%; /* Full width for smaller screens */
     max-width: 100%; /* Ensure items don’t overflow their container */
     padding: 16px; /* Adjust padding for smaller screens */
-    margin-bottom: 0; /* Remove margin-bottom to avoid stacking */
     box-sizing: border-box; /* Ensure padding and margin are included in width */
-    background: rgba(12, 12, 12, 0.6); /* Ensure background color */
-    border-radius: 10px; /* Ensure border-radius for design */
-    flex: 1 1 auto; /* Allow items to grow and shrink as needed */
   }
 
   .historyItem img {
@@ -215,5 +213,22 @@
 
   .title {
     font-size: 20px; /* Adjust font size for the title */
+  }
+
+  .skill {
+    min-width: 100px; /* Adjust size for smaller screens */
+  }
+
+  .skill p {
+    font-size: 20px; /* Adjust font size for skill text */
+  }
+
+  .skillImageContainer {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skillImageContainer img {
+    width: 60px;
   }
 }

@@ -1,0 +1,104 @@
+/* Container for the Organizations section */
+.container {
+  color: var(--color-text);
+  margin: 79px 10%; /* Ensure margin matches the Experience section */
+  overflow: hidden; /* Hide overflow to keep the animation contained */
+  position: relative; /* Position relative for absolute child positioning */
+}
+
+/* Title for the section */
+.title {
+  color: var(--color-text);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  padding-left: 0; /* Align title with the container's content */
+}
+
+/* Content container */
+.content {
+  display: flex;
+  overflow: hidden; /* Hide overflow to maintain the scrolling effect */
+  white-space: nowrap; /* Prevent line breaks */
+  position: relative; /* Relative position for animation */
+}
+
+/* Inner container for animation */
+.scroll-wrapper {
+  display: flex;
+  width: 200%; /* Make the inner wrapper twice the width of the container */
+  animation: scroll-horizontal 30s linear infinite; /* Continuous scrolling */
+}
+
+/* Organization item */
+.organizationItem {
+  display: inline-flex; /* Make items inline and allow horizontal alignment */
+  flex-direction: column; /* Stack image and details vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  background: var(--color-background); /* Background color for visibility */
+  border-radius: 10px;
+  padding: 20px;
+  width: 150px; /* Adjust width as needed */
+  box-sizing: border-box;
+  margin-right: 100px; /* Space between items */
+}
+
+/* Organization item image */
+.organizationImage {
+  display: block; /* Remove inline spacing */
+  margin-bottom: 10px; /* Space between image and text */
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Organization item details */
+.organizationDetails {
+  font-family: var(--font-inter);
+  text-align: center; /* Center text */
+}
+
+.organizationDetails h3 {
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: 700;
+  margin: 0 0 5px 0; /* Margin below the title */
+}
+
+.organizationDetails p {
+  font-size: 14px; /* Adjust font size as needed */
+  font-weight: 300;
+  margin: 0; /* Remove margin */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container {
+    margin: 79px 9%; /* Adjust margin for smaller screens */
+  }
+
+  .title{
+    font-size: 20px;
+  }
+
+  .organizationItem {
+    width: 120px; /* Adjust item width for smaller screens */
+    margin-right: 50px; /* Adjust space between items */
+  }
+
+  .organizationImage {
+    width: 150px; /* Adjust image width */
+  }
+}
+

@@ -2,7 +2,8 @@
 
 .container {
   position: relative;
-  background-color: rgba(12, 12, 12, 0.6);
+  background-color: rgba(156, 169, 134, 0.5);
+  box-shadow: 0 16px 14px 0 #04152d;
   border-radius: 15px;
   padding: 73px;
   margin-top: 129px;
@@ -46,7 +47,7 @@
 
 @media screen and (max-width: 830px) {
   .container {
-    background-color: transparent;
+    background-color: rgba(156, 169, 134, 0.5);
     padding: 20px; /* Adjust padding for mobile view */
     margin-left: 5%;
     margin-right: 5%;
