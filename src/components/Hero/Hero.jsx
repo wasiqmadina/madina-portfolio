@@ -26,7 +26,7 @@ export const Hero = () => {
             <img src={getImageUrl("contact/gmail.png")} alt="" />
           </a>
           <a
-            href="https://github.com/madinawasiq"
+            href="https://www.github.com/wasiqmadina"
             className={styles.socialLink}
           >
             <img src={getImageUrl("contact/github.png")} alt="" />

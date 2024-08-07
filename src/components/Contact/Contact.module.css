@@ -13,7 +13,7 @@
 }
 
 .text h2 {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 700;
   letter-spacing: 4px;
   font-family: Rochester;
@@ -21,7 +21,7 @@
 }
 
 .text p {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 2px;
   font-family: Inter;
@@ -42,8 +42,8 @@
 }
 
 .link img {
-  width: 40px;
-  height: 40px; 
+  width: 36px;
+  height: 36px; 
 }
 
 @media screen and (max-width: 830px) {
