@@ -10,14 +10,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Container for the experience section */
 .container {
   color: var(--color-text);
   margin: 79px 10%;
-  transition: border 0.3s; /* Smooth transition for border effect */
+  transition: border 0.3s;
 }
 
-/* Title for the section */
 .title {
   color: var(--color-text);
   font-size: 28px;
@@ -27,113 +25,102 @@ html {
   margin-bottom: 30px;
 }se
 
-/* Content container */
 .content {
   display: flex;
   flex-direction: column;
   gap: 34px;
 }
 
-/* History section */
 .history {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping of items */
-  justify-content: space-between; /* Distribute items evenly */
+  flex-wrap: wrap; 
+  justify-content: space-between;
   width: 100%;
-  background: var(--color-background); /* Ensure background color for visibility */
-  transition: border 0.3s; /* Smooth transition for border effect */
+  background: var(--color-background); 
+  transition: border 0.3s; 
 }
 
-/* Ensure history items are displayed inline and have proper spacing */
 .historyItem {
-  display: flex; /* Use flexbox to center content */
-  flex-direction: column; /* Arrange items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
   background: rgba(156, 169, 134, 0.5);
   border-radius: 10px;
   padding: 24px;
-  width: calc(25% - 20px); /* Adjust based on your design */
+  width: calc(25% - 20px);
   box-sizing: border-box;
-  margin-bottom: 20px; /* Space between items */
-  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Smooth transition for hover effect */
+  margin-bottom: 20px; 
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; 
 }
 
-/* Hover effect for the container */
+
 .container:hover .history {
-  border: 2px solid var(--color-accent); /* Add a border on hover */
+  border: 2px solid var(--color-accent);
 }
 
-/* Hover effect for history items */
 .historyItem:hover {
-  transform: scale(1.05); /* Slightly increase size */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-  filter: brightness(1.2); /* Brighten the container */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  filter: brightness(1.2);
 }
 
 .historyItem img {
-  display: block; /* Remove inline spacing */
-  margin: 0 auto; /* Center the image horizontally */
-  width: 50px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
+  display: block; 
+  margin: 0 auto; 
+  width: 50px; 
+  height: auto; 
 }
 
 .historyItemDetails {
   font-family: var(--font-inter);
-  text-align: center; /* Center the title */
+  text-align: center; 
 }
 
 .historyItemDetails h3 {
   font-size: 25px;
   font-weight: 700;
-  margin: 0 0 10px 0; /* Margin below the title */
+  margin: 0 0 10px 0;
   font-family: 'Arial', sans-serif;
 }
 
 .historyItemDetails p {
   font-size: 20px;
   font-weight: 300;
-  margin: 0 0 10px 0; /* Margin below the paragraph */
+  margin: 0 0 10px 0; 
 }
 
 .historyItemDetails ul {
-  text-align: left; /* Align bullets and text to the left */
-  margin: 0; /* Remove default margin */
-  padding-left: 20px; /* Ensure enough padding for bullet alignment */
-  list-style-position: outside; /* Ensure bullets are inside the list */
-  font-size: 16px; /* Adjust font size as needed */
+  text-align: left; 
+  margin: 0; 
+  padding-left: 20px; 
+  list-style-position: outside; 
+  font-size: 16px; 
 }
 
 .historyItemDetails li {
-  margin-bottom: 8px; /* Space between list items */
-  padding-left: 0; /* Remove extra padding from list items */
+  margin-bottom: 8px;
+  padding-left: 0; 
 }
 
-/* Skills section */
 .skills {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center skills horizontally */
+  justify-content: center; 
   gap: 60px;
-  margin-top: 30px; /* Add margin to move the skills down */
+  margin-top: 30px; 
 }
 
-/* Individual skill item */
+
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  min-width: 120px; /* Adjust based on design */
-  transition: transform 0.3s ease; /* Smooth transition */
+  min-width: 120px; 
 }
 
-.skill:hover {
-  transform: scale(1.1); /* Slightly increase size */
-  z-index: 1; /* Bring the hovered skill to the front */
-}
 
-/* Skill image container with brightening effect */
 .skillImageContainer {
   background-color: var(--color-secondary);
   border-radius: 100%;
@@ -142,31 +129,17 @@ html {
   justify-content: center;
   width: 120px;
   height: 120px;
-  transition: filter 0.3s ease; /* Smooth transition for filter */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
-/* Hover effect for the skill image container */
-.skill:hover .skillImageContainer {
-  filter: brightness(1.4); /* Brighten the container */
-}
-
-/* Skill image */
 .skillImageContainer img {
   width: 75px;
-  transition: width 0.3s ease; /* Smooth transition for image size */
 }
 
-/* Skill text */
 .skill p {
-  font-size: 25px;
+  font-size: 22px;
   font-family: var(--font-inter);
   font-weight: 500;
-  transition: color 0.3s ease; /* Smooth transition for text color */
-}
-
-.skill:hover p {
-  color: var(--color-accent); /* Change text color on hover */
 }
 
 /* Media Queries for Responsive Design */
@@ -179,48 +152,48 @@ html {
 
   .history {
     flex-direction: column; /* Stack history items vertically */
-    gap: 15px; /* Reduced gap between history items */
-    margin-top: 20px; /* Adjust margin for smaller screens */
+    gap: 15px; 
+    margin-top: 20px; 
   }
 
   .historyItem {
-    width: 100%; /* Full width for smaller screens */
-    max-width: 100%; /* Ensure items don’t overflow their container */
-    padding: 16px; /* Adjust padding for smaller screens */
-    box-sizing: border-box; /* Ensure padding and margin are included in width */
+    width: 100%; 
+    max-width: 100%;
+    padding: 16px; 
+    box-sizing: border-box; 
   }
 
   .historyItem img {
-    width: 40px; /* Adjust width as needed */
+    width: 40px; 
   }
 
   .historyItemDetails h3 {
-    font-size: 18px; /* Adjust font size for titles */
+    font-size: 18px; 
   }
 
   .historyItemDetails p {
-    font-size: 14px; /* Adjust font size for paragraphs */
+    font-size: 14px; 
   }
 
   .historyItemDetails ul {
-    padding-left: 15px; /* Adjust padding for bullets */
-    font-size: 12px; /* Adjust font size for list items */
+    padding-left: 15px;
+    font-size: 12px;
   }
 
   .historyItemDetails li {
-    font-size: 12px; /* Adjust font size for list items */
+    font-size: 12px; 
   }
 
   .title {
-    font-size: 20px; /* Adjust font size for the title */
+    font-size: 20px; 
   }
 
   .skill {
-    min-width: 100px; /* Adjust size for smaller screens */
+    min-width: 100px; 
   }
 
   .skill p {
-    font-size: 20px; /* Adjust font size for skill text */
+    font-size: 20px; 
   }
 
   .skillImageContainer {

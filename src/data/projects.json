@@ -1,10 +1,19 @@
 [
     {
       "title": "Personal website",
-      "imageSrc": "assets/projects/project.png",
+      "imageSrc": "projects/project.png",
       "description": "This landing page is built with React, HTML, CSS.",
       "skills": [],
       "demo": "https://www.example.com",
       "source": "https://github.com/wasiqmadina/madina-portfolio"
+    },
+
+    {
+      "title": "KitchenKonnect",
+      "imageSrc": "projects/kk.png",
+      "description": "This Pantry Track App is built with NextJs, Javascript",
+      "skills": [],
+      "demo": "https://youtu.be/PZ7so3QoLH4",
+      "source": "https://kitchenkonnect.vercel.app/"
     }
   ]
