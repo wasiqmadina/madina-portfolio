@@ -57,7 +57,7 @@
 @media screen and (max-width: 830px) {
   .container {
     padding: 12px 16px;
-    max-width: 50%;
+    max-width: 75%;
   }
 
   .title {
