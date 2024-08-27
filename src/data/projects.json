@@ -15,5 +15,14 @@
       "skills": [],
       "demo": "https://youtu.be/PZ7so3QoLH4",
       "source": "https://kitchenkonnect.vercel.app/"
+    },
+
+    {
+      "title": "QesaMate",
+      "imageSrc": "projects/qesamate.png",
+      "description": "This AI chatbot website is built with Vercel, Javascript, GEMINI API",
+      "skills": [],
+      "demo": "https://youtu.be/LjlKrsPYrC8",
+      "source": "https://qesamate.vercel.app/"
     }
   ]
